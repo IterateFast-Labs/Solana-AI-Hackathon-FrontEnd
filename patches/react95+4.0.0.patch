@@ -1,0 +1,27 @@
+diff --git a/node_modules/react95/dist/common/hooks/useIsFocusVisible.mjs b/node_modules/react95/dist/common/hooks/useIsFocusVisible.mjs
+index afef844..a1a39d2 100644
+--- a/node_modules/react95/dist/common/hooks/useIsFocusVisible.mjs
++++ b/node_modules/react95/dist/common/hooks/useIsFocusVisible.mjs
+@@ -1,5 +1,5 @@
+ import { useCallback } from 'react';
+-import { findDOMNode } from 'react-dom';
++// import { findDOMNode } from 'react-dom';
+ 
+ let hadKeyboardEvent = true;
+ let hadFocusVisibleRecently = false;
+@@ -73,12 +73,13 @@ function handleBlurVisible() {
+   }, 100);
+ }
+ function useIsFocusVisible() {
+-  const ref = useCallback((instance) => {
+-    const node = findDOMNode(instance);
++
++  const ref = useCallback((node) => {
+     if (node != null) {
+       prepare(node.ownerDocument);
+     }
+   }, []);
++
+   return { isFocusVisible, onBlurVisible: handleBlurVisible, ref };
+ }
+ 

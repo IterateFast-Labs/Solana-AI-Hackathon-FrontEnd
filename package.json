@@ -1,0 +1,58 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prepare": "husky",
+    "pre-commit": "lint-staged",
+    "dev": "next dev",
+    "build": "next build && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "@react95/icons": "^2.1.1",
+    "@tanstack/react-query": "^5.56.2",
+    "@telegram-apps/sdk": "^2.5.1",
+    "@worldcoin/minikit-js": "^1.4.0",
+    "axios": "^1.7.7",
+    "eruda": "^3.4.0",
+    "framer-motion": "^11.11.17",
+    "jwt-decode": "^4.0.0",
+    "next": "^15.0.3",
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0",
+    "react": "^19.0.0-rc.1",
+    "react-dom": "^19.0.0-rc.1",
+    "react-draggable": "^4.4.6",
+    "react-hook-form": "^7.53.1",
+    "react95": "^4.0.0",
+    "styled-components": "^5.3.3",
+    "typescript-cookie": "^1.0.6",
+    "viem": "^2.21.55",
+    "zod": "^3.23.8",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@swc/plugin-styled-components": "^3.0.3",
+    "@tanstack/eslint-plugin-query": "^5.58.1",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/node": "^20",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
+    "@types/styled-components": "^5.1.25",
+    "eslint": "^8",
+    "eslint-config-next": "^15.0.3",
+    "husky": "^9.1.6",
+    "prettier": "3.3.3",
+    "typescript": "^5"
+  },
+  "resolutions": {
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+  }
+}

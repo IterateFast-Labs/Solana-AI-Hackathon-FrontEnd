@@ -1,0 +1,2 @@
+yarn run lint
+prettier --write src/**/*.ts src/**/*.tsx
